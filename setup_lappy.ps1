@@ -1,0 +1,21 @@
+Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+choco install -y git
+choco install -y vscode
+choco install -y intellijidea-community
+choco install -y vim
+choco install -y docker
+# write setup for vim setup
+choco install -y python
+$env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User") 
+python -m pip install --upgrade pip
+choco install -y f.lux
+choco install -y dropbox
+choco install -y keepass
+choco install -y 7zip
+chdir D:
+mkdir D:\Git
+cd D:\Git
+git clone https://github.com/PlatanoBailando/terraform.git
+cp D:\Git\terraform\vim\vimrc ${env:USERPROFILE}\.vimrc
+cp D:\Git\terraform\vim\hm.vim ${env:USERPROFILE}\hm.vim
+cp D:\Git\terraform\vim\hybrid_material.vim ${env:USERPROFILE}\hybrid_material.vim
