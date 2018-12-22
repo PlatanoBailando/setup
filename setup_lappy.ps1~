@@ -13,8 +13,7 @@ choco install -y dropbox
 choco install -y keepass
 choco install -y 7zip
 choco install -y vlc
-choco install -y conemu
-choco install -y steam
+choco install steam
 chdir D:
 mkdir D:\Git
 cd D:\Git
